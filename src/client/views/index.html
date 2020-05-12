@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <title>Travel App</title>
+  </head>
+  <body>
+    <main class="app">
+      <h2 class="app_title">Travel App</h2>
+      <div id="topHolder" class="holder">
+        <div class="trip_input">
+          <label for="city">Destination:</label>
+          <input type="text" id="city" placeholder="Enter city name here" />
+        </div>
+        <div class="trip_input">
+          <label>Departure Date:</label>
+          <input type="date" id="date" />
+        </div>
+        <div class="trip_input">
+          <label>Returning Date:</label>
+          <input type="date" id="end_date" />
+        </div>
+      </div>
+      <button id="generate" type="submit">Get My Trip Info!</button>
+      <div class="trip_details">
+        <h2 class="country"><span id="country"></span></h2>
+        <h3 class="title">
+          Your trip to <span id="country"></span> is <span id="daysaway"></span>
+        </h3>
+        <div class="trip_banner">
+          <div id="img_trip"></div>
+          <div class="trip_content">
+            <h3>
+              You will be there for
+              <div class="trip_lenght"></div>
+              days
+            </h3>
+            <div class="trip_weather">
+              <span><strong>Typical Weather: </strong></span>
+              <div id="weather"></div>
+            </div>
+            <div class="trip_lat">
+              <span><strong>Latitude: </strong></span>
+              <div id="lat"></div>
+            </div>
+            <div class="trip_long">
+              <span><strong>Logitude: </strong></span>
+              <div id="long"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgba(90, 85, 79, 0.726);
+  color: #fff;
+  line-height: 2.5em;
+}
+/*General Styles*/
+h2 {
+  font-size: 1.7em;
+}
+
+.holder {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}

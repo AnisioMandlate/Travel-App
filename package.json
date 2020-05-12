@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "A travel app to help you plan your travel",
+  "main": "y",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnisioMandlate/Travel-App.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "anisiomandlate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnisioMandlate/Travel-App/issues"
+  },
+  "homepage": "https://github.com/AnisioMandlate/Travel-App#readme"
+}
