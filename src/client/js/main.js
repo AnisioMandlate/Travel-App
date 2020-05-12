@@ -85,7 +85,6 @@ const getCity = async (baseURL, city, key) => {
         console.log(dataWeather.data[15].weather.description);
 
         /** Defining weather Description */
-
         const weatherDescription = dataWeather.data[15].weather.description;
         const highTemp = dataWeather.data[15].high_temp;
         const lowTemp = dataWeather.data[15].low_temp;
