@@ -61,3 +61,5 @@ function newElement() {
     };
   }
 }
+
+export { newElement };

@@ -21,8 +21,8 @@ app.use(cors());
 app.use(express.static("dist"));
 
 // GET route
-app.get("/", function (req, res) {
-  res.sendFile(path.resolve("src/client/views/index.html"));
+app.get("/giveMeProjectData", function (req, res) {
+  res.send(projectData);
 });
 
 // Setup Server
