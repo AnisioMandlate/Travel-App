@@ -53,7 +53,8 @@ const getCity = async (baseURL, city, key) => {
 
     /** Getting the country name and addind to the page */
     const country = data.geonames[0].countryName;
-    document.getElementById("country").innerHTML = country;
+    document.getElementById("country").innerHTML =
+      '"country+", "+ "destination"';
 
     /** This is getting the longitude and latitude from the data */
     const lat = data.geonames[0].lat;
@@ -65,9 +66,7 @@ const getCity = async (baseURL, city, key) => {
     const daysAway = differenceInDays;
     document.getElementById("daysaway").innerHTML = `${daysAway} days away!`;
     const totalOfDays = DifferenceInVacationInDays;
-    document.getElementsByClassName(
-      "trip_length"
-    ).innerHTML = `${totalOfDays} days.`;
+    document.getElementsById("trip_length").innerHTML = `${totalOfDays} days.`;
 
     /** Fetching data from Weather API */
     const weather = fetch(
