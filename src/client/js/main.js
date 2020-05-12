@@ -65,7 +65,9 @@ const getCity = async (baseURL, city, key) => {
     const daysAway = differenceInDays;
     document.getElementById("daysaway").innerHTML = `${daysAway} days away!`;
     const totalOfDays = DifferenceInVacationInDays;
-    document.getElementById("trip_length").innerHTML = `${totalOfDays} days.`;
+    document.getElementsByClassName(
+      "trip_length"
+    ).innerHTML = `${totalOfDays} days.`;
 
     /** Fetching data from Weather API */
     const weather = fetch(
