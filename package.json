@@ -4,7 +4,8 @@
   "description": "A travel app to help you plan your travel",
   "main": "y",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/AnisioMandlate/Travel-App/issues"
   },
-  "homepage": "https://github.com/AnisioMandlate/Travel-App#readme"
+  "homepage": "https://github.com/AnisioMandlate/Travel-App#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
 }

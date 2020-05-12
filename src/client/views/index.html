@@ -23,35 +23,57 @@
           <input type="date" id="end_date" />
         </div>
       </div>
-      <button id="generate" type="submit">Get My Trip Info!</button>
+      <div class="trip_generator">
+        <button id="generate" type="submit">Get My Trip Info!</button>
+      </div>
       <div class="trip_details">
         <h2 class="country"><span id="country"></span></h2>
         <h3 class="title">
-          Your trip to <span id="country"></span> is <span id="daysaway"></span>
+          Your trip to <span id="country"></span> is
+          <span id="daysaway"> away</span>
+        </h3>
+        <h3>
+          You will be there for
+          <span class="trip_lenght"></span>
+          days
         </h3>
         <div class="trip_banner">
-          <div id="img_trip"></div>
+          <div id="trip_img"></div>
           <div class="trip_content">
-            <h3>
-              You will be there for
-              <div class="trip_lenght"></div>
-              days
-            </h3>
             <div class="trip_weather">
               <span><strong>Typical Weather: </strong></span>
               <div id="weather"></div>
             </div>
-            <div class="trip_lat">
-              <span><strong>Latitude: </strong></span>
-              <div id="lat"></div>
+            <div class="trip_coordinates">
+              <div class="tri_lat">
+                <span><strong>Latitude: </strong></span>
+                <div id="lat"></div>
+              </div>
+              <div class="trip_long">
+                <span><strong>Longitude: </strong></span>
+                <div id="long"></div>
+              </div>
             </div>
-            <div class="trip_long">
-              <span><strong>Logitude: </strong></span>
-              <div id="long"></div>
+            <div class="trip_departure">
+              <span><strong>Departure date: </strong></span>
+              <div id="departure"></div>
+            </div>
+            <div class="trip_return">
+              <span><strong>Return Date: </strong></span>
+              <div id="return"></div>
+            </div>
+            <div id="to-do" class="to-do_list">
+              <h4 style="margin: 5px;">To-Do Trip</h4>
+              <input type="text" id="myInput" placeholder="Add to-do" />
+              <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+            <div class="to-do_items">
+              <ul id="myUL"></ul>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <script src="../js/to-do.js"></script>
   </body>
 </html>
