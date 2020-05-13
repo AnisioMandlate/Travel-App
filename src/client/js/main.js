@@ -53,8 +53,8 @@ const getCity = async (baseURL, city, key) => {
 
     /** Getting the country name and addind to the page */
     const country = data.geonames[0].countryName;
-    document.getElementById("country").innerHTML =
-      '"country+", "+ "destination"';
+    const putCity = data.geonames[0].cityName;
+    document.getElementById("country").innerHTML = `${putCity}, ${country}`;
 
     /** This is getting the longitude and latitude from the data */
     const lat = data.geonames[0].lat;
@@ -65,8 +65,8 @@ const getCity = async (baseURL, city, key) => {
     /** Getting the no. of days till travel and the total days os travel */
     const daysAway = differenceInDays;
     document.getElementById("daysaway").innerHTML = `${daysAway} days away!`;
-    const totalOfDays = DifferenceInVacationInDays;
-    document.getElementsById("trip_length").innerHTML = `${totalOfDays} days.`;
+    const totalOfDays = differenceInVacationInDays;
+    document.getElementById("trip_length").innerHTML = `${totalOfDays} days.`;
 
     /** Fetching data from Weather API */
     const weather = fetch(
@@ -77,12 +77,12 @@ const getCity = async (baseURL, city, key) => {
       })
       .then((dataWeather) => {
         console.log(dataWeather);
-        console.log(dataWeather.data[15].weather.description);
+        console.log(dataWeather.data[5].weather.description);
 
         /** Defining weather Description */
-        const weatherDescription = dataWeather.data[15].weather.description;
-        const highTemp = dataWeather.data[15].high_temp;
-        const lowTemp = dataWeather.data[15].low_temp;
+        const weatherDescription = dataWeather.data[5].weather.description;
+        const highTemp = dataWeather.data[5].high_temp;
+        const lowTemp = dataWeather.data[5].low_temp;
 
         /** Adding to the UI */
         document.getElementById(
@@ -108,7 +108,7 @@ const getCity = async (baseURL, city, key) => {
           .catch((err) => {
             console.log("There is no image");
             //Defining image src
-            const noImage = "/src/client/img/unamed.jpg";
+            const noImage = "/src/client/img/unnamed.jpg";
             //Adding src to image div
             document.getElementById(
               "trip_img"
