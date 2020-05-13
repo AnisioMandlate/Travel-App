@@ -2,7 +2,7 @@
 const baseURL = "http://api.geonames.org/searchJSON?q=";
 const apiKey = "&username=anisiomandlate";
 
-const urlweather = "https://api.weatherbit.io/v2.0/forecast/daily?";
+const urlWeather = "https://api.weatherbit.io/v2.0/forecast/daily?";
 const apiWeather = "74a6a8af6b9a4b4eb78303d308bf238c";
 
 const urlImages = "https://pixabay.com/api/?key=";
@@ -14,7 +14,7 @@ function performAction(e) {
 }
 
 const getCity = async (baseURL, city, key) => {
-  const res = await fetch("http://api.geonames.org/searchJSON?q=" + city + key);
+  const res = await fetch(baseURL + city + key);
   try {
     const data = await res.json();
 
@@ -70,13 +70,7 @@ const getCity = async (baseURL, city, key) => {
 
     /** Fetching data from Weather API */
     const weather = fetch(
-      "https://api.weatherbit.io/v2.0/forecast/daily?" +
-        "lat=" +
-        lat +
-        "&lon=" +
-        long +
-        "&key=" +
-        apiWeather
+      urlWeather + "lat=" + lat + "&lon=" + long + "&key=" + apiWeather
     )
       .then((weatherResponse) => {
         return weatherResponse.json();
@@ -97,12 +91,7 @@ const getCity = async (baseURL, city, key) => {
 
         /** Fetching data from Image API */
         const image = fetch(
-          "https://cors-anywhere.herokuapp.com/https://pixabay.com/api/?safesearch" +
-            apiImages +
-            "&q=" +
-            city +
-            "+city" +
-            "&image_type=photo"
+          urlImages + apiImages + "&q=" + city + "+city" + "&image_type=photo"
         )
           .then((imageResponse) => {
             return imageResponse.json();
