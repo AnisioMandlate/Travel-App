@@ -39,7 +39,7 @@ h2 {
       border-radius: 50px;
       outline: none;
       font-size: 0.9em;
-      width: 100%;
+      width: 90%;
     }
 
     ::placeholder {
@@ -110,5 +110,28 @@ h2 {
   .trip_return,
   .trip_coordinates {
     padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .holder,
+  .trip_banner {
+    flex-direction: column;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .trip_img,
+  .trip_content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .trip_weather_and_coordinates {
+    display: block;
+  }
+
+  .trip_coordinates {
+    padding-left: 0 !important;
   }
 }
