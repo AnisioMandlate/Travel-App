@@ -59,6 +59,7 @@ h2 {
     border-radius: 50px;
     color: white;
     padding: 15px 32px;
+    margin-bottom: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -70,14 +71,15 @@ h2 {
 
 .trip_details {
   padding: 30px;
+  background-color: whitesmoke;
 }
 
 .trip_coordinates {
   display: flex;
-  justify-content: left;
+  // justify-content: left;
 
   .trip_long {
-    padding: 0 20px;
+    padding: 0 50px;
   }
 }
 
@@ -97,4 +99,16 @@ h2 {
 .trip_content {
   padding: 0 20px;
   background-color: #fdefe5;
+}
+
+.trip_weather_and_coordinates,
+.dates {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+
+  .trip_return,
+  .trip_coordinates {
+    padding-left: 50px;
+  }
 }

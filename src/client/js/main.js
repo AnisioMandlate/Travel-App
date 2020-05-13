@@ -9,7 +9,7 @@ const urlImages = "https://pixabay.com/api/?key=";
 const apiImages = "16447058-179c1fb6eb8f36e5ed73a0122";
 
 function performAction(e) {
-  const destination = document.getElementById("city").value;
+  let destination = document.getElementById("city").value;
   getCity(baseURL, destination, apiKey);
 }
 
@@ -53,8 +53,8 @@ const getCity = async (baseURL, city, key) => {
 
     /** Getting the country name and addind to the page */
     const country = data.geonames[0].countryName;
-    const putCity = data.geonames[0].cityName;
-    document.getElementById("country").innerHTML = `${putCity}, ${country}`;
+    let destination = document.getElementById("city").value;
+    document.getElementById("country").innerHTML = `${destination}, ${country}`;
 
     /** This is getting the longitude and latitude from the data */
     const lat = data.geonames[0].lat;
@@ -66,7 +66,17 @@ const getCity = async (baseURL, city, key) => {
     const daysAway = differenceInDays;
     document.getElementById("daysaway").innerHTML = `${daysAway} days away!`;
     const totalOfDays = differenceInVacationInDays;
-    document.getElementById("trip_length").innerHTML = `${totalOfDays} days.`;
+    const tripLength = document.getElementById("trip_lenght");
+    tripLength.innerHTML = `${totalOfDays} days`;
+
+    /** Add the departure and return date to UI */
+    const departure = (document.getElementById(
+      "departure"
+    ).innerHTML = `${startDate}`);
+
+    const returnDate = (document.getElementById(
+      "return"
+    ).innerHTML = `${endDate}`);
 
     /** Fetching data from Weather API */
     const weather = fetch(
@@ -87,7 +97,7 @@ const getCity = async (baseURL, city, key) => {
         /** Adding to the UI */
         document.getElementById(
           "weather"
-        ).innerHTML = `${weatherDescription} </br>High Temp: ${highTemp} </br>Low Temp: ${lowTemp}`;
+        ).innerHTML = `${weatherDescription} </br>High Temp: ${highTemp} °C </br>Low Temp: ${lowTemp} °C`;
 
         /** Fetching data from Image API */
         const image = fetch(
@@ -97,9 +107,9 @@ const getCity = async (baseURL, city, key) => {
             return imageResponse.json();
           })
           .then((dataImage) => {
-            console.log(dataImage.hits[0].largeImageURL);
+            console.log(dataImage.hits[0].webformatURL);
             //Defining image src
-            const imageSrc = dataImage.hits[0].largeImageURL;
+            const imageSrc = dataImage.hits[0].webformatURL;
             //Adding src to image div
             document.getElementById(
               "trip_img"
