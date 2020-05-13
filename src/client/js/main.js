@@ -133,4 +133,5 @@ const getCity = async (baseURL, city, key) => {
     console.log("error", error);
   }
 };
+
 export { performAction };
