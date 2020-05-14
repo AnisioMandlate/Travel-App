@@ -1,5 +1,4 @@
 node_modules
 .babelrc
 webpack.dev.js
-webpack.prod.js
 dist
