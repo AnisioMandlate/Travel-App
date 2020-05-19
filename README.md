@@ -1,4 +1,4 @@
-# # Udacity: Travel App
+# Udacity: Travel App
 
 ## Overview
 
