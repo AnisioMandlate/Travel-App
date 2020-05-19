@@ -1,5 +1,5 @@
 /** Global variables */
-const baseURL = "https://api.geonames.org/searchJSON?q=";
+const baseURL = "https://secure.geonames.org/searchJSON?q=";
 const apiKey = "&username=anisiomandlate";
 
 const urlWeather = "https://api.weatherbit.io/v2.0/forecast/daily?";
