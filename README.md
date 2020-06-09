@@ -21,7 +21,7 @@ You will need to sign up [here](https://pixabay.com/) to get Pixabay credentials
 ### To Run The Project
 
 - cd into your new folder and run in prod mode
-- `npm installi`
+- `npm install`
 - `npm run build-prod to generate a dist folder for prod`
 - `npm run start to run the Express server on port 5000`
 
